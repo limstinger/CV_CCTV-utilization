@@ -25,7 +25,14 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
   * [공공데이터포털](https://www.data.go.kr/data/15063717/fileData.do)
  
 ## **Description**
-### 코드에 대한 내용은 주석을 참고
+ **코드에 대한 내용은 주석을 참고**
+
+ * 영상 녹화
+   
+ * 영상 확대 / 축소
+   
+ * 영상 Image subtraction
+   
 
 
 
