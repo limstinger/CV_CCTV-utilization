@@ -35,8 +35,8 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
 
 * 녹화 기능
   * 비디오를 녹화하기 위한 코덱 정의 및 videoWriter 객체 생성<br>
-    `fourcc = cv2.VideoWriter_fourcc(*'XVID')<br>
-     out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))`
+    ```fourcc = cv2.VideoWriter_fourcc(*'XVID')
+     out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))```
 
   * 
  
