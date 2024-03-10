@@ -27,7 +27,7 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
 ## **Description**
 각 코드에 주석이 있어 참고 가능
 * 초기 설정
-  * 캡처 초기화 
+  * 캡처 초기화<br>
     `cap = cv2.VideoCapture(0)` <- 0 대신 CCTV의 IP주소 문자열 형태로 넣어도 가능
   * UI Control Flag
     `start_recording = False`<br>
