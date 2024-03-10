@@ -44,12 +44,10 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
  * 영상 확대 / 축소
    * '[' 눌렀을 때 확대, ']'를 누르면 축소
      ```bash
-     if key == ord(' '):
-        start_recording = not start_recording
-        if start_recording:
-            print("녹화 시작")
-        else:
-            print("녹화 중지")
+     if key == ord('['):
+        zoom_scale = min(zoom_scale + 0.1, 4)   
+     if key == ord(']'):
+        zoom_scale = max(zoom_scale - 0.1, 1)   
      
    <p align="center">
   <img src="https://github.com/limstinger/CV_CCTV-utilization/assets/113160281/9e5fa3e5-3bea-4ebf-9cbf-01f4a0c072de">
