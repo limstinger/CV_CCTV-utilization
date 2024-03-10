@@ -28,8 +28,10 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
  **코드에 대한 내용은 주석을 참고**
 
  * 영상 녹화
+   ![](./Video/Record.mp4)<br>
    
  * 영상 확대 / 축소
+   ![](./Video/Zoom in_out.mp4)<br>
    
  * 영상 Image subtraction
    
