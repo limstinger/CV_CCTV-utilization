@@ -33,9 +33,14 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
 </p>
    
  * 영상 확대 / 축소
-   ![](./Video/Zoom in_out.mp4)<br>
+   <p align="center">
+  <img src="https://github.com/limstinger/CV_CCTV-utilization/assets/113160281/9e5fa3e5-3bea-4ebf-9cbf-01f4a0c072de">
+</p>
    
  * 영상 Image subtraction
+   <p align="center">
+  <img src="https://github.com/limstinger/CV_CCTV-utilization/assets/113160281/2beac98d-e019-4e8d-9990-c160ca919f5b">
+</p>
    
 
 
