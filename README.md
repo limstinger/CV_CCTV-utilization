@@ -32,6 +32,12 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
      ```bash
      fourcc = cv2.VideoWriter_fourcc(*'XVID')
      out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
+
+   * 영상 녹화 중인지 확인하기 위해 체크할 위젯 생성
+     ```bash
+     if start_recording:
+        cv2.circle(combined, (25, 25), 5, (0, 0, 255), -1)
+        out.write(frame)
      
    * 스페이스바를 통해 영상 녹화 시작 / 종료 조절
      ```bash
