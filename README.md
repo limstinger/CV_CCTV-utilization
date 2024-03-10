@@ -25,10 +25,20 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
   * [공공데이터포털](https://www.data.go.kr/data/15063717/fileData.do)
  
 ## **Description**
+각 코드에 주석이 있어 참고 가능
+* 초기 설정
+  * 캡처 초기화 
+    `cap = cv2.VideoCapture(0)` <- 0 대신 CCTV의 IP주소 문자열 형태로 넣어도 가능
+  * UI Control Flag
+    `start_recording = False`<br>
+    `zoom_scale = 1.0`<br>
+
 * 녹화 기능
-비디오를 녹화하기 위한 코덱 정의 및 videoWriter 객체 생성<br>
-`fourcc = cv2.VideoWriter_fourcc(*'XVID')`<br>
-`out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))`
+  * 비디오를 녹화하기 위한 코덱 정의 및 videoWriter 객체 생성<br>
+    `fourcc = cv2.VideoWriter_fourcc(*'XVID')`<br>
+    `out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))`
+
+  * 
  
 
 
