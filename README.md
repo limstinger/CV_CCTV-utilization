@@ -53,6 +53,17 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
 </p>
    
  * 영상 확대 / 축소
+   * 영상의 중앙점을 기준으로 확대 또는 축소할 영역을 선택 후 영상 조정 시 사용할 보간 방법을 선택
+     ```bash
+     height, width = frame.shape[:2]
+     centerX, centerY = int(width / 2), int(height / 2)
+     radiusX, radiusY = int(centerX / zoom_scale), int(centerY / zoom_scale)
+     minX, maxX = centerX - radiusX, centerX + radiusX
+     minY, maxY = centerY - radiusY, centerY + radiusY
+
+     cropped = frame[minY:maxY, minX:maxX]
+     resized_cropped = cv2.resize(cropped, (width, height), interpolation=cv2.INTER_LINEAR)
+     
    * '[' 눌렀을 때 확대, ']'를 누르면 축소
      ```bash
      if key == ord('['):
@@ -65,6 +76,21 @@ CCTV의 영상을 CV를 활용하여 녹화 기능(Record)과 영상 확대와 �
 </p>
    
  * 영상 Image subtraction
+   * Image subtraction을 하기 위해 초기 설정
+     ```bash
+     ret, frame = cap.read()
+     first_frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+     first_frame_gray = cv2.GaussianBlur(first_frame_gray, (21, 21), 0)
+
+     img_prev = first_frame_gray.copy() # 이전 프레임을 저장하기 위해
+
+   처리할 데이터를 줄이고 계산을 단순화하기 위해 cv2.COLOR_BGR2GRAY 사용
+
+   * 이미지 차이 계산
+     ```bash
+     img_diff = cv2.absdiff(img_prev, gray)
+     img_prev = gray.copy()
+   
    * 기존 영상과 이미지 서브트랙션한 영상을 비교할 수 있도록 옆에 배치
      ```bash
      combined = cv2.hconcat([resized_cropped, img_diff_resized])  # 결합
